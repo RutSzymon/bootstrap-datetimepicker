@@ -1114,6 +1114,16 @@
         "July", "August", "September", "October", "November", "December"],
       monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
         "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    pl: {
+      days:["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek",
+        "Piątek", "Sobota", "Niedziela"],
+      daysShort:["Nie", "Pon", "Wto", "Śro", "Czw", "Pią", "Sob", "Nie"],
+      daysMin:["Ni", "Po", "Wt", "Śr", "Cz", "Pi", "So", "Ni"],
+      months:["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec",
+        "Lipiec", "Sierpień","Wrzesień", "Październik", "Listopad", "Grudzień"],
+      monthsShort:["Sty", "Lut", "Mar", "Kwi", "Maj", "Cze", "Lip",
+        "Sie", "Wrz", "Paź", "Lis", "Gru"]
     }
   };
 
