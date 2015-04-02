@@ -266,16 +266,16 @@
       offset.top = offset.top + this.height;
 
       var $window = $(window);
-      
+
       if ( this.options.width != undefined ) {
         this.widget.width( this.options.width );
       }
-      
+
       if ( this.options.orientation == 'left' ) {
         this.widget.addClass( 'left-oriented' );
         offset.left   = offset.left - this.widget.width() + 20;
       }
-      
+
       if (this._isInFixed()) {
         position = 'fixed';
         offset.top -= $window.scrollTop();
@@ -639,27 +639,27 @@
 
     actions: {
       incrementHours: function(e) {
-        this._date.setUTCHours(this._date.getUTCHours() + 1);
+        this._date.setUTCHours(this._date.getUTCHours() + this.options.stepHours);
       },
 
       incrementMinutes: function(e) {
-        this._date.setUTCMinutes(this._date.getUTCMinutes() + 1);
+        this._date.setUTCMinutes(this._date.getUTCMinutes() + this.options.stepMinutes);
       },
 
       incrementSeconds: function(e) {
-        this._date.setUTCSeconds(this._date.getUTCSeconds() + 1);
+        this._date.setUTCSeconds(this._date.getUTCSeconds() + this.options.stepSeconds);
       },
 
       decrementHours: function(e) {
-        this._date.setUTCHours(this._date.getUTCHours() - 1);
+        this._date.setUTCHours(this._date.getUTCHours() - this.options.stepHours);
       },
 
       decrementMinutes: function(e) {
-        this._date.setUTCMinutes(this._date.getUTCMinutes() - 1);
+        this._date.setUTCMinutes(this._date.getUTCMinutes() - this.options.stepMinutes);
       },
 
       decrementSeconds: function(e) {
-        this._date.setUTCSeconds(this._date.getUTCSeconds() - 1);
+        this._date.setUTCSeconds(this._date.getUTCSeconds() - this.options.stepSeconds);
       },
 
       togglePeriod: function(e) {
@@ -849,9 +849,9 @@
         } else if (property === 'Period12') {
           if (d.getUTCHours() >= 12) return 'PM';
           else return 'AM';
-	} else if (property === 'UTCYear') {
+    } else if (property === 'UTCYear') {
           rv = d.getUTCFullYear();
-          rv = rv.toString().substr(2);   
+          rv = rv.toString().substr(2);
         } else {
           methodName = 'get' + property;
           rv = d[methodName]();
@@ -1097,7 +1097,10 @@
     pickSeconds: true,
     startDate: -Infinity,
     endDate: Infinity,
-    collapse: true
+    collapse: true,
+    stepHours: 1,
+    stepMinutes: 1,
+    stepSeconds: 1
   };
   $.fn.datetimepicker.Constructor = DateTimePicker;
   var dpgId = 0;
