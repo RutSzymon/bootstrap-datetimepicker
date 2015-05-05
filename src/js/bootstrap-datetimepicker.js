@@ -496,12 +496,12 @@
       table.parent().hide();
       var html = '';
       var current = 0;
-      for (var i = 0; i < 5; i++) {
+      for (var i = 0; i < 3; i++) {
         html += '<tr>';
         for (var j = 0; j < 4; j += 1) {
           var c = current.toString();
           html += '<td class="minute">' + padLeft(c, 2, '0') + '</td>';
-          current += 3;
+          current += 5;
         }
         html += '</tr>';
       }
