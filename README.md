@@ -8,3 +8,4 @@ Visit this [fork](https://github.com/Eonasdan/bootstrap-datetimepicker) for curr
 Added:
 - stepHours, stepMinutes and stepSeconds options
 - Polish locales
+- 5 minutes interval in minutes table (.timepicker-minutes)
